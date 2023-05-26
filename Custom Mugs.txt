@@ -1,0 +1,30 @@
+
+ ***** Custom Mugs *****
+
+ ---- VARIABLE COSTS TABLE ----
+            Quantity  Price  Expense
+Name                                
+Printing         300  $0.75  $225.00
+Plain Mugs       300  $1.00  $300.00
+Packaging        300  $0.50  $150.00
+
+----- Variable Costs -----
+Total Expenses: $675.00
+
+ **** FIXED COSTS TABLE ****
+            Cost
+Name            
+Stall Hire  25.0
+Artwork     35.0
+Signage     15.0
+
+ ***** FIXED COSTS ******
+Total Cost: $75.00
+
+ ##### OVERALL COSTS (VARIABLE AND FIXED) ####
+Costs: $750.00
+
+ #### PROFITS ####
+Profit wanted: $750.00
+Sales needed to reach profit goal: $1500.00
+Minimum Sale Price: $5.00
