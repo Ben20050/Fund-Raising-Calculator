@@ -105,6 +105,7 @@ while True:
         # choice stores whether the user is paying a dollar amount or percentage
         choice = "percentage"
         break
+        pass 
 
     else:
         print("That is not a valid answer, please try (Dollar / Percentage)")
@@ -167,29 +168,47 @@ total_expenses = variables_frame['Expense'].sum()
 # FOR FIXED TABLE
 total_expenses_fixed = fixed_frame['Cost'].sum()
 
-# Currency Formatting (uses currency function)
+# VARIABLE Currency Formatting (uses currency function)
 add_dollars = ['Price', 'Expense']
 for var_item in add_dollars:
     variables_frame[var_item] = variables_frame[var_item].apply(currency)
 
-# change frame to a string, so we can import it to a file
-# VARIABLE
-variables_frame_string = pandas.DataFrame.to_string(variables_frame)
-
-# FIXED
-fixed_frame_string = pandas.DataFrame.to_string(fixed_frame)
+# FIXED Currency Formatting (uses currency function)
+add_dollars = ['Cost']
+for var_item in add_dollars:
+    fixed_frame[var_item] = fixed_frame[var_item].apply(currency)
 
 # setting variables for printing
 print_product_name = "\n ***** {} *****".format(product_name)
 # VARIABLE PRINTS
-variable_frame_heading = "\n ---- VARIABLE COSTS TABLE ----"
-variable_costs_heading = "\n----- Variable Costs -----"
-total_variable_costs = "Total Expenses: ${:.2f}".format(total_expenses)
+if len(all_variable_names):
+    # change frame to a string, so I can import it to a file
+    # VARIABLE
+    variables_frame_string = pandas.DataFrame.to_string(variables_frame)
+    variable_frame_heading = "\n ---- VARIABLE COSTS TABLE ----"
+    variable_costs_heading = "\n----- Variable Costs -----"
+    total_variable_costs = "Total Expenses: ${:.2f}".format(total_expenses)
+else:
+    # makes prints empty
+    variables_frame_string = ""
+    variable_frame_heading = ""
+    variable_costs_heading = ""
+    total_variable_costs = ""
 
 # FIXED PRINTS
-fixed_frame_heading = "\n **** FIXED COSTS TABLE ****"
-fixed_costs_heading = "\n ***** FIXED COSTS ******"
-total_fixed_costs = "Total Cost: ${:.2f}".format(total_expenses_fixed)
+if len(all_fixed_names):
+    # change frame to a string, so I can import it to a file
+    # FIXED
+    fixed_frame_string = pandas.DataFrame.to_string(fixed_frame)
+    fixed_frame_heading = "\n **** FIXED COSTS TABLE ****"
+    fixed_costs_heading = "\n ***** FIXED COSTS ******"
+    total_fixed_costs = "Total Cost: ${:.2f}".format(total_expenses_fixed)
+else:
+    # makes prints empty
+    fixed_frame_string = ""
+    fixed_frame_heading = ""
+    fixed_costs_heading = ""
+    total_fixed_costs = ""
 
 # Final Calculations (Variables + Fixed)
 overall_cost = total_expenses + total_expenses_fixed
