@@ -18,16 +18,19 @@ def not_empty(question):
 
 # makes sure users only enters integers
 def numbers_only(question):
-    num_response = 0
 
     while True:
 
         try:
             num_response = int(input(question))
+            assert num_response > 0
             return num_response
 
         except ValueError:
             print("Invalid answer, please enter an integer")
+
+        except AssertionError:
+            print("Number MUST be positive")
 
 
 # makes sure users only enters integers
@@ -37,10 +40,14 @@ def allow_decimal(question):
 
         try:
             num_response = float(input(question))
+            assert num_response >= 0
             return num_response
 
         except ValueError:
             print("Invalid answer, please enter a number")
+
+        except AssertionError:
+            print("Number MUST be positive")
 
 
 # rounds numbers to two decimal values
@@ -72,21 +79,13 @@ fixed_dict = {
     "Name": all_fixed_names,
     "Cost": all_costs_fixed
 }
-# main routine starts here
+# MAIN ROUTINE STARTS HERE
 print()
 
 product_name = not_empty("What is your product name? ")
 
-# loop ensuring the users enters a whole number that isn't 0 or negative
-while True:
-
-    product_amount = numbers_only("How many products are you going to sell? ")
-
-    if product_amount >= 1:
-        break
-
-    else:
-        print("Please enter a whole number higher than 0")
+# asks user how many products they will be selling
+product_amount = numbers_only("How many products are you going to sell? ")
 
 
 # loop that asks user if they are donating a dollar amount or percentage

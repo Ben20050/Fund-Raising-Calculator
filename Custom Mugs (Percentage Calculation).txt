@@ -1,5 +1,5 @@
 
- ***** Custom Mugs *****
+ ***** Custom Mugs (Percentage Calculation) *****
 
  ---- VARIABLE COSTS TABLE ----
             Quantity  Price  Expense
@@ -18,13 +18,13 @@ Stall Hire  $25.00
 Artwork     $35.00
 Signage     $15.00
 
- ***** FIXED COSTS *****
+ ***** FIXED COSTS ******
 Total Cost: $75.00
 
- ##### OVERALL COSTS (VARIABLE AND FIXED) #####
+ ##### OVERALL COSTS (VARIABLE AND FIXED) ####
 Costs: $750.00
 
  #### PROFITS ####
-Profit wanted: $750.00
-Sales needed to reach profit goal: $1500.00
-Minimum Sale Price: $5.00
+Profit wanted: $562.50
+Sales needed to reach profit goal: $1312.50
+Minimum Sale Price: $4.38
