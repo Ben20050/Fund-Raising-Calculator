@@ -1,5 +1,5 @@
 
- ***** Custom Mugs *****
+ ***** Custom Mugs (Percentage Calculator) *****
 
  ---- VARIABLE COSTS TABLE ----
             Quantity  Price  Expense
@@ -25,6 +25,6 @@ Total Cost: $75.00
 Costs: $750.00
 
  #### PROFITS ####
-Profit wanted: $750.00
-Sales needed to reach profit goal: $1500.00
-Minimum Sale Price: $5.00
+Profit wanted: $562.50
+Sales needed to reach profit goal: $1312.50
+Minimum Sale Price: $4.38
