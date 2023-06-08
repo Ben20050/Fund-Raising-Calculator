@@ -139,7 +139,7 @@ for var_item in add_dollars:
 variables_frame_string = pandas.DataFrame.to_string(variables_frame)
 
 # setting variables for printing
-variable_frame_heading = "\n ---- VARIABLE TABLE ----"
+variable_frame_heading = "\n ---- VARIABLE COSTS TABLE ----"
 variable_costs_heading = "\n----- Variable Costs -----"
 total_variable_costs = "Total Variable Costs: ${:.2f}".format(total_expenses)
 
