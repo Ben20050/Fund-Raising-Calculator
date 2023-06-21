@@ -1,4 +1,4 @@
-# imports
+# import statements
 import pandas
 
 # functions go here
